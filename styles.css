@@ -6,7 +6,8 @@
 }
 
 body {
-    height: 90vh;
+    height: 30em;
+    width: 90%;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -26,9 +27,9 @@ body {
     justify-content: center;
     text-align: center;
     align-items: center;
-    max-width: 1200px;
+    max-width: 80em;
     flex-wrap: wrap;
-    z-index: 50px;
+    z-index: 60px;
 }
 
 #caja1,
@@ -52,6 +53,7 @@ body {
     border-top: 0.5px solid rgba(255, 255, 255, 0.5);
     border-left: 0.5px solid rgba(255, 255, 255, 0.5);
     backdrop-filter: blur(2px);
+    transition: 1s;
 }
 
 #caja2 {
@@ -63,6 +65,7 @@ body {
     border-top: 0.5px solid rgba(255, 255, 255, 0.5);
     border-left: 0.5px solid rgba(255, 255, 255, 0.5);
     backdrop-filter: blur(2px);
+    transition: 1s;
 }
 
 #caja3 {
@@ -74,4 +77,102 @@ body {
     border-top: 0.5px solid rgba(255, 255, 255, 0.5);
     border-left: 0.5px solid rgba(255, 255, 255, 0.5);
     backdrop-filter: blur(2px);
+    transition: 1s;
+}
+
+#caja3:hover,
+#caja2:hover,
+#caja1:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transition: 1s;
+}
+
+
+.contenedor2 {
+    display: inline;
+}
+
+#searchBar {
+    width: 50vh;
+    padding: 10px 20px 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333533;
+    border: none;
+    border-radius: 5px 0px 0px 5px;
+
+}
+
+#btnBuscar {
+    width: 12vh;
+    padding: 5px;
+    font-size: 20px;
+    color: white;
+    font-weight: 600;
+    border: .5px solid rgba(255, 255, 255, 0.2);
+    border-radius: 0px 5px 5px 0px;
+    cursor: pointer;
+    background: #60696b;
+    transition: tranform 0.3s ease;
+    transition: .5s;
+}
+
+#btnBuscar:hover {
+    background: #adb5bd;
+    color: rgb(67, 67, 67);
+    transition: .5s;
+    transform: translateY(2px);
+}
+
+@media (max-width: 1200px) {
+    body {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 996px) {
+    body {
+        height: 50em;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        height: 45em;
+        font-size: 1.2em;
+    }
+}
+
+@media (max-width: 576px) {
+    body {
+        height: 60em;
+        font-size: 20px;
+    }
+
+    #contenedor {
+        /* text-align: center;
+        display: grid;
+        transform: translateY(50px);
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 10px; */
+        position: relative;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        max-width: 40em;
+        flex-wrap: wrap;
+        z-index: 60px;
+    }
+
+    #searchBar {
+        width: 30vh;
+        padding: 10px 20px 10px 20px;
+        font-size: 16px;
+        font-weight: bold;
+        color: #333533;
+        border: none;
+        border-radius: 5px 0px 0px 5px;
+
+    }
 }
